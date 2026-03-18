@@ -7,11 +7,11 @@ import VNBNPLGrowthChart from "@/components/insights/vietnam/VNBNPLGrowthChart";
 import VNConclusion from "@/components/insights/vietnam/VNConclusion";
 
 export const metadata: Metadata = {
-  title: "Hệ sinh thái Fintech Việt Nam 2024 | MoMo Research",
+  title: "Hệ sinh thái Fintech Việt Nam Q1/2026 | MoMo Research",
   description:
-    "Phân tích toàn diện thị trường Fintech Việt Nam — so sánh MoMo, ZaloPay, VNPay, ShopeePay về thị phần, GMV, QR coverage và tăng trưởng BNPL.",
+    "Phân tích toàn diện thị trường Fintech Việt Nam Q1/2026 — so sánh MoMo, ZaloPay, VNPay, ShopeePay về thị phần, GMV, QR coverage và tăng trưởng BNPL.",
   openGraph: {
-    title: "Hệ sinh thái Fintech Việt Nam 2024 | MoMo Research",
+    title: "Hệ sinh thái Fintech Việt Nam Q1/2026 | MoMo Research",
     description:
       "Phân tích toàn diện thị trường Fintech Việt Nam — MoMo, ZaloPay, VNPay, ShopeePay.",
     type: "article",
