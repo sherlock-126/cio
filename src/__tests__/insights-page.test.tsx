@@ -1,32 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import InsightsPage from "@/app/insights/page";
-
-// Mock recharts to avoid canvas/DOM issues in jsdom
-jest.mock("recharts", () => {
-  const React = require("react");
-  const MockChart = ({ children, ...props }: any) =>
-    React.createElement("div", { "data-testid": "mock-chart", ...props }, children);
-  const MockComponent = (props: any) =>
-    React.createElement("div", props);
-  return {
-    ResponsiveContainer: ({ children }: any) =>
-      React.createElement("div", { "data-testid": "responsive-container" }, children),
-    BarChart: MockChart,
-    LineChart: MockChart,
-    RadarChart: MockChart,
-    Bar: MockComponent,
-    Line: MockComponent,
-    Radar: MockComponent,
-    XAxis: MockComponent,
-    YAxis: MockComponent,
-    CartesianGrid: MockComponent,
-    Tooltip: MockComponent,
-    Legend: MockComponent,
-    PolarGrid: MockComponent,
-    PolarAngleAxis: MockComponent,
-    PolarRadiusAxis: MockComponent,
-  };
-});
+import InsightsHubPage from "@/app/insights/page";
 
 // Mock framer-motion
 jest.mock("framer-motion", () => {
@@ -47,64 +20,49 @@ jest.mock("next/font/google", () => ({
   Inter: () => ({ className: "inter" }),
 }));
 
-describe("Insights Page", () => {
-  it("renders the report title", () => {
-    render(<InsightsPage />);
-    expect(
-      screen.getByText("Thị trường Fintech & Ví điện tử Trung Quốc 2024")
-    ).toBeInTheDocument();
+describe("Insights Hub Page", () => {
+  it("renders the hub heading", () => {
+    render(<InsightsHubPage />);
+    expect(screen.getByText("Market Insights")).toBeInTheDocument();
   });
 
-  it("renders the subtitle", () => {
-    render(<InsightsPage />);
-    expect(
-      screen.getByText("Phân tích chuyên sâu: Alipay vs WeChat Pay")
-    ).toBeInTheDocument();
-  });
-
-  it("renders executive summary section", () => {
-    render(<InsightsPage />);
-    expect(screen.getByText("Tóm tắt Điều hành")).toBeInTheDocument();
-  });
-
-  it("renders key findings", () => {
-    render(<InsightsPage />);
-    expect(
-      screen.getByText(/Alipay duy trì vị trí dẫn đầu/)
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(/WeChat Pay tăng trưởng mạnh/)
-    ).toBeInTheDocument();
-  });
-
-  it("renders all chart section headings", () => {
-    render(<InsightsPage />);
-    expect(
-      screen.getByText("Thị phần Thanh toán Di động")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("Xu hướng Tăng trưởng Giao dịch")
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText("Hành vi Người tiêu dùng")
-    ).toBeInTheDocument();
-  });
-
-  it("renders conclusion section", () => {
-    render(<InsightsPage />);
-    expect(
-      screen.getByText("Kết luận & Triển vọng")
-    ).toBeInTheDocument();
-  });
-
-  it("renders chart containers", () => {
-    render(<InsightsPage />);
-    const containers = screen.getAllByTestId("responsive-container");
-    expect(containers).toHaveLength(3);
-  });
-
-  it("renders MoMo Research author", () => {
-    render(<InsightsPage />);
+  it("renders MoMo Research label", () => {
+    render(<InsightsHubPage />);
     expect(screen.getByText("MoMo Research")).toBeInTheDocument();
+  });
+
+  it("renders 3 report cards with correct titles", () => {
+    render(<InsightsHubPage />);
+    expect(
+      screen.getByText("Fintech Trung Quốc: Alipay vs WeChat Pay")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Hệ sinh thái Fintech Việt Nam 2024")
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText("Ông Đỗ Quang Thuận — Hồ sơ Lãnh đạo")
+    ).toBeInTheDocument();
+  });
+
+  it("renders correct hrefs for each report card", () => {
+    render(<InsightsHubPage />);
+    const links = screen.getAllByRole("link");
+    const hrefs = links.map((link) => link.getAttribute("href"));
+    expect(hrefs).toContain("/insights/china-fintech");
+    expect(hrefs).toContain("/insights/vietnam-fintech");
+    expect(hrefs).toContain("/insights/leader/do-quang-thuan");
+  });
+
+  it("renders category tags", () => {
+    render(<InsightsHubPage />);
+    const marketTags = screen.getAllByText("Báo cáo Thị trường");
+    expect(marketTags).toHaveLength(2);
+    expect(screen.getByText("Hồ sơ Lãnh đạo")).toBeInTheDocument();
+  });
+
+  it("renders CTA text on all cards", () => {
+    render(<InsightsHubPage />);
+    const ctas = screen.getAllByText("Xem báo cáo");
+    expect(ctas).toHaveLength(3);
   });
 });
