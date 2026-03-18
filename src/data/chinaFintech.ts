@@ -1,7 +1,7 @@
 export const reportMeta = {
-  title: "Thị trường Fintech & Ví điện tử Trung Quốc 2024",
+  title: "Thị trường Fintech & Ví điện tử Trung Quốc Q1/2026",
   subtitle: "Phân tích chuyên sâu: Alipay vs WeChat Pay",
-  date: "Tháng 3, 2024",
+  date: "Tháng 3, 2026",
   author: "MoMo Research",
 };
 
@@ -18,6 +18,8 @@ export const marketShareData: MarketShareEntry[] = [
   { name: "2022", alipay: 53.8, wechatPay: 39.2 },
   { name: "2023", alipay: 52.5, wechatPay: 40.1 },
   { name: "2024", alipay: 51.8, wechatPay: 41.0 },
+  { name: "2025", alipay: 51.2, wechatPay: 41.6 },
+  { name: "2026", alipay: 50.5, wechatPay: 42.3 },
 ];
 
 export interface GrowthTrendEntry {
@@ -34,6 +36,8 @@ export const growthTrendData: GrowthTrendEntry[] = [
   { name: "2022", alipay: 85.4, wechatPay: 68.7 },
   { name: "2023", alipay: 98.7, wechatPay: 82.3 },
   { name: "2024", alipay: 118.2, wechatPay: 96.5 },
+  { name: "2025", alipay: 135.6, wechatPay: 112.8 },
+  { name: "2026", alipay: 152.4, wechatPay: 128.3 },
 ];
 
 export interface ConsumerBehaviorEntry {
@@ -43,18 +47,18 @@ export interface ConsumerBehaviorEntry {
 }
 
 export const consumerBehaviorData: ConsumerBehaviorEntry[] = [
-  { feature: "Thanh toán", alipay: 92, wechatPay: 95 },
-  { feature: "Đầu tư", alipay: 88, wechatPay: 45 },
-  { feature: "Bảo hiểm", alipay: 82, wechatPay: 35 },
-  { feature: "Mạng xã hội", alipay: 30, wechatPay: 98 },
-  { feature: "E-commerce", alipay: 90, wechatPay: 72 },
-  { feature: "Tín dụng", alipay: 85, wechatPay: 65 },
+  { feature: "Thanh toán", alipay: 93, wechatPay: 96 },
+  { feature: "Đầu tư", alipay: 90, wechatPay: 52 },
+  { feature: "Bảo hiểm", alipay: 85, wechatPay: 42 },
+  { feature: "Mạng xã hội", alipay: 35, wechatPay: 98 },
+  { feature: "E-commerce", alipay: 91, wechatPay: 76 },
+  { feature: "Tín dụng", alipay: 87, wechatPay: 70 },
 ];
 
 export const keyFindings = [
-  "Alipay duy trì vị trí dẫn đầu với ~52% thị phần thanh toán di động, nhưng khoảng cách đang thu hẹp.",
-  "WeChat Pay tăng trưởng mạnh nhờ tích hợp sâu vào hệ sinh thái mạng xã hội với hơn 1.3 tỷ người dùng.",
-  "Tổng giá trị giao dịch thanh toán di động Trung Quốc đạt hơn 214 nghìn tỷ CNY trong năm 2024.",
+  "Alipay duy trì vị trí dẫn đầu với ~50.5% thị phần thanh toán di động tính đến Q1/2026, khoảng cách với WeChat Pay tiếp tục thu hẹp.",
+  "WeChat Pay tăng trưởng mạnh nhờ tích hợp sâu vào hệ sinh thái mạng xã hội với hơn 1.4 tỷ người dùng.",
+  "Tổng giá trị giao dịch thanh toán di động Trung Quốc dự kiến vượt 280 nghìn tỷ CNY trong năm 2026.",
   "Xu hướng tài chính nhúng (embedded finance) đang định hình lại cạnh tranh — cả hai nền tảng mở rộng sang bảo hiểm, đầu tư và tín dụng tiêu dùng.",
 ];
 

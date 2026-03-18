@@ -16,16 +16,16 @@ export const metadata: Metadata = {
 
 const reports = [
   {
-    title: "Fintech Trung Quốc: Alipay vs WeChat Pay",
+    title: "Fintech Trung Quốc: Alipay vs WeChat Pay Q1/2026",
     summary:
-      "Phân tích chuyên sâu thị trường ví điện tử Trung Quốc 2024 — so sánh thị phần, tăng trưởng giao dịch và hành vi người tiêu dùng.",
+      "Phân tích chuyên sâu thị trường ví điện tử Trung Quốc Q1/2026 — so sánh thị phần, tăng trưởng giao dịch và hành vi người tiêu dùng.",
     href: "/insights/china-fintech",
     category: "Báo cáo Thị trường",
   },
   {
-    title: "Hệ sinh thái Fintech Việt Nam 2024",
+    title: "Hệ sinh thái Fintech Việt Nam Q1/2026",
     summary:
-      "Toàn cảnh thị trường Fintech Việt Nam — phân tích quy mô, đối thủ cạnh tranh, và xu hướng phát triển hệ sinh thái thanh toán số.",
+      "Toàn cảnh thị trường Fintech Việt Nam Q1/2026 — phân tích quy mô, đối thủ cạnh tranh, và xu hướng phát triển hệ sinh thái thanh toán số.",
     href: "/insights/vietnam-fintech",
     category: "Báo cáo Thị trường",
   },

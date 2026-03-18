@@ -41,7 +41,7 @@ export const profileMeta: ProfileMeta = {
   name: "Đỗ Quang Thuận",
   title: "Phó Tổng Giám đốc Cấp cao - Khối Dịch vụ Tài chính",
   organization: "MoMo",
-  date: "Tháng 3, 2024",
+  date: "Tháng 3, 2026",
   initials: "ĐQT",
 };
 
@@ -52,7 +52,7 @@ export const featuredQuote: FeaturedQuote = {
 
 export const bioIntro: BioParagraph[] = [
   {
-    text: "Anh Đỗ Quang Thuận là Phó Tổng Giám đốc Cấp cao phụ trách Khối Dịch vụ Tài chính tại MoMo - siêu ứng dụng tài chính hàng đầu Việt Nam với hơn 31 triệu người dùng. Với hơn 15 năm kinh nghiệm trong lĩnh vực tài chính số và công nghệ, anh là một trong những kiến trúc sư chủ chốt đằng sau chiến lược 'bình dân hóa' dịch vụ tài chính của MoMo.",
+    text: "Anh Đỗ Quang Thuận là Phó Tổng Giám đốc Cấp cao phụ trách Khối Dịch vụ Tài chính tại MoMo - siêu ứng dụng tài chính hàng đầu Việt Nam với hơn 42 triệu người dùng. Với hơn 17 năm kinh nghiệm trong lĩnh vực tài chính số và công nghệ, anh là một trong những kiến trúc sư chủ chốt đằng sau chiến lược 'bình dân hóa' dịch vụ tài chính của MoMo.",
   },
   {
     text: "Dưới sự dẫn dắt của anh Thuận, Khối Dịch vụ Tài chính MoMo đã phát triển từ một nền tảng thanh toán di động đơn thuần thành một hệ sinh thái tài chính toàn diện, bao gồm tín dụng tiêu dùng, bảo hiểm số, đầu tư và tiết kiệm - phục vụ đặc biệt cho phân khúc khách hàng chưa được ngân hàng phục vụ đầy đủ.",
@@ -62,23 +62,23 @@ export const bioIntro: BioParagraph[] = [
 export const achievements: Achievement[] = [
   {
     label: "Người dùng Tài chính",
-    value: "10M+",
+    value: "15M+",
     description: "Người dùng sử dụng dịch vụ tài chính trên MoMo",
   },
   {
     label: "Đối tác Tài chính",
-    value: "50+",
+    value: "65+",
     description: "Ngân hàng và tổ chức tài chính hợp tác",
   },
   {
     label: "Giải ngân Tín dụng",
-    value: "30K tỷ+",
+    value: "55K tỷ+",
     description: "Tổng giá trị giải ngân tín dụng tiêu dùng",
   },
   {
     label: "Tăng trưởng YoY",
-    value: "150%",
-    description: "Tăng trưởng doanh thu dịch vụ tài chính 2023",
+    value: "120%",
+    description: "Tăng trưởng doanh thu dịch vụ tài chính 2025",
   },
 ];
 
@@ -119,6 +119,18 @@ export const milestones: Milestone[] = [
     description:
       "Khối Dịch vụ Tài chính đạt mốc 10 triệu người dùng hoạt động, doanh thu tăng trưởng 150% YoY, khẳng định vị thế dẫn đầu fintech tại Việt Nam.",
   },
+  {
+    year: "2024",
+    title: "Mở rộng Hệ sinh thái Tài chính",
+    description:
+      "Ra mắt nền tảng quản lý tài sản cá nhân và bảo hiểm nhân thọ số, đưa tổng số người dùng dịch vụ tài chính vượt 12 triệu.",
+  },
+  {
+    year: "2025",
+    title: "15 triệu người dùng & SME Lending",
+    description:
+      "Đạt mốc 15 triệu người dùng tài chính, triển khai giải pháp tín dụng cho doanh nghiệp vừa và nhỏ (SME), tổng giải ngân vượt 55 nghìn tỷ VNĐ.",
+  },
 ];
 
 export const visionSections: VisionSection[] = [
@@ -139,7 +151,7 @@ export const visionSections: VisionSection[] = [
   {
     title: "Tương lai Fintech Việt Nam",
     paragraphs: [
-      "Nhìn về phía trước, anh Thuận đặt mục tiêu biến MoMo thành nền tảng tài chính toàn diện (comprehensive financial platform) phục vụ 50 triệu người Việt Nam vào năm 2026. Chiến lược bao gồm mở rộng sang các sản phẩm quản lý tài sản, bảo hiểm nhân thọ số, và các giải pháp tài chính cho doanh nghiệp vừa và nhỏ (SME).",
+      "Nhìn về phía trước, anh Thuận đặt mục tiêu biến MoMo thành nền tảng tài chính toàn diện (comprehensive financial platform) phục vụ 60 triệu người Việt Nam vào năm 2028. Chiến lược bao gồm mở rộng sang các sản phẩm quản lý tài sản, bảo hiểm nhân thọ số, và các giải pháp tài chính cho doanh nghiệp vừa và nhỏ (SME).",
       "Anh tin rằng Việt Nam đang ở điểm chuyển giao quan trọng, nơi sự kết hợp giữa dân số trẻ, tỷ lệ sử dụng smartphone cao, và chính sách hỗ trợ từ Chính phủ sẽ tạo ra 'khoảnh khắc vàng' cho fintech - và MoMo sẵn sàng dẫn dắt cuộc cách mạng tài chính này.",
     ],
   },

@@ -37,6 +37,7 @@ export default function VNBNPLGrowthChart() {
           <XAxis
             dataKey="year"
             tick={{ fill: "#64748b", fontSize }}
+            interval="preserveStartEnd"
           />
           <YAxis
             yAxisId="left"
