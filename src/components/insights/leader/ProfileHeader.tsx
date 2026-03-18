@@ -15,7 +15,7 @@ export default function ProfileHeader() {
           {!imgError ? (
             <div className="relative w-32 h-32 md:w-44 md:h-44 rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/leaders/do-quang-thuan.jpg"
+                src="/leaders/do-quang-thuan-v2.jpg"
                 alt={profileMeta.name}
                 fill
                 className="object-cover"
