@@ -15,15 +15,17 @@ export default function ChartSection({
   children,
 }: ChartSectionProps) {
   return (
-    <AnimatedSection className="mb-16">
-      <h2 className="font-playfair text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-        {title}
-      </h2>
-      {description && (
-        <p className="text-gray-500 mb-8 text-lg">{description}</p>
-      )}
-      <div className="overflow-x-auto">
-        <div className="min-w-[500px]">{children}</div>
+    <AnimatedSection variant="scaleIn">
+      <div className="glass-card">
+        <h2 className="font-playfair text-2xl md:text-3xl font-bold text-navy-900 mb-3">
+          {title}
+        </h2>
+        {description && (
+          <p className="text-slate-500 mb-8 text-lg">{description}</p>
+        )}
+        <div className="overflow-x-auto">
+          <div className="min-w-[500px]">{children}</div>
+        </div>
       </div>
     </AnimatedSection>
   );

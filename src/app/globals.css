@@ -10,3 +10,12 @@ html {
 body {
   font-family: "Inter", sans-serif;
 }
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md rounded-3xl shadow-lg border border-white/20 p-6 md:p-8;
+  }
+  .glass-card-hover {
+    @apply glass-card transition-shadow duration-300 hover:shadow-xl;
+  }
+}
