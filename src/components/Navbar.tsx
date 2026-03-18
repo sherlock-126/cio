@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -9,6 +10,7 @@ const navLinks = [
   { label: "Quy trình", href: "#process" },
   { label: "Đội ngũ", href: "#team" },
   { label: "Liên hệ", href: "#contact" },
+  { label: "Reports", href: "/insights" },
 ];
 
 export default function Navbar() {
@@ -37,15 +39,25 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-gray-700 hover:text-momo-pink transition-colors font-medium"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-700 hover:text-momo-pink transition-colors font-medium"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-gray-700 hover:text-momo-pink transition-colors font-medium"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
 
           {/* Mobile hamburger */}
@@ -61,16 +73,27 @@ export default function Navbar() {
         {/* Mobile menu */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block py-2 px-4 text-gray-700 hover:text-momo-pink hover:bg-gray-50 rounded transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("/") ? (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block py-2 px-4 text-gray-700 hover:text-momo-pink hover:bg-gray-50 rounded transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block py-2 px-4 text-gray-700 hover:text-momo-pink hover:bg-gray-50 rounded transition-colors"
+                >
+                  {link.label}
+                </a>
+              )
+            )}
           </div>
         )}
       </div>
