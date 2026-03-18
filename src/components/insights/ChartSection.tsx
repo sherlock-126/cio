@@ -23,9 +23,7 @@ export default function ChartSection({
         {description && (
           <p className="text-slate-500 mb-8 text-lg">{description}</p>
         )}
-        <div className="overflow-x-auto">
-          <div className="min-w-[500px]">{children}</div>
-        </div>
+        <div className="w-full">{children}</div>
       </div>
     </AnimatedSection>
   );
