@@ -1,0 +1,21 @@
+import { keyFindings } from "@/data/vietnamFintech";
+import AnimatedSection from "../AnimatedSection";
+
+export default function VNExecutiveSummary() {
+  return (
+    <AnimatedSection>
+      <div className="glass-card">
+        <h2 className="font-playfair text-2xl md:text-3xl font-bold text-navy-900 mb-8">
+          Tóm tắt Điều hành
+        </h2>
+        <div className="border-l-4 border-momo-pink pl-6 space-y-4">
+          {keyFindings.map((finding, i) => (
+            <p key={i} className="text-slate-700 leading-relaxed text-lg">
+              {finding}
+            </p>
+          ))}
+        </div>
+      </div>
+    </AnimatedSection>
+  );
+}
