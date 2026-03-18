@@ -7,6 +7,7 @@ interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
   variant?: "fadeUp" | "scaleIn";
+  delay?: number;
 }
 
 const variants = {
@@ -24,6 +25,7 @@ export default function AnimatedSection({
   children,
   className = "",
   variant = "fadeUp",
+  delay = 0,
 }: AnimatedSectionProps) {
   const v = variants[variant];
   return (
@@ -31,7 +33,7 @@ export default function AnimatedSection({
       initial={v.initial}
       whileInView={v.animate}
       viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut", delay }}
       className={className}
     >
       {children}
