@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+
+# Environment
+.env
+.env.local
+.env.production.local
+.env.development.local
+
+# Debug
+npm-debug.log*
+
+# VibeDev auto-generated (do not commit)
+CLAUDE.md
+.vibedev-status.json
+.vibedev-prompt.md
