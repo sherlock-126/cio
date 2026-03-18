@@ -21,37 +21,40 @@ export default function ConsumerBehaviorChart() {
     >
       <ResponsiveContainer width="100%" height={450}>
         <RadarChart data={consumerBehaviorData}>
-          <PolarGrid stroke="#e5e7eb" />
+          <PolarGrid stroke="#e2e8f0" />
           <PolarAngleAxis
             dataKey="feature"
-            tick={{ fill: "#6b7280", fontSize: 13 }}
+            tick={{ fill: "#64748b", fontSize: 13 }}
           />
           <PolarRadiusAxis
             angle={30}
             domain={[0, 100]}
-            tick={{ fill: "#9ca3af" }}
+            tick={{ fill: "#94a3b8" }}
           />
           <Tooltip
             contentStyle={{
-              borderRadius: "8px",
-              border: "none",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              borderRadius: "16px",
+              border: "1px solid rgba(255,255,255,0.2)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.12)",
+              backgroundColor: "rgba(255,255,255,0.85)",
+              backdropFilter: "blur(12px)",
+              padding: "12px 16px",
             }}
           />
           <Radar
             name="Alipay"
             dataKey="alipay"
-            stroke="#1677FF"
-            fill="#1677FF"
-            fillOpacity={0.2}
+            stroke="#D82D8B"
+            fill="#D82D8B"
+            fillOpacity={0.15}
             strokeWidth={2}
           />
           <Radar
             name="WeChat Pay"
             dataKey="wechatPay"
-            stroke="#07C160"
-            fill="#07C160"
-            fillOpacity={0.2}
+            stroke="#1A3058"
+            fill="#1A3058"
+            fillOpacity={0.15}
             strokeWidth={2}
           />
           <Legend />
