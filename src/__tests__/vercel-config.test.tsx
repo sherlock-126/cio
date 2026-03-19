@@ -24,4 +24,16 @@ describe("Vercel deployment configuration", () => {
     expect(fs.existsSync(publicDir)).toBe(true);
     expect(fs.statSync(publicDir).isDirectory()).toBe(true);
   });
+
+  test("public directory contains favicon.ico", () => {
+    const faviconPath = path.join(rootDir, "public", "favicon.ico");
+    expect(fs.existsSync(faviconPath)).toBe(true);
+  });
+
+  test("next.config uses .mjs extension (not .ts)", () => {
+    const mjs = path.join(rootDir, "next.config.mjs");
+    const ts = path.join(rootDir, "next.config.ts");
+    expect(fs.existsSync(mjs)).toBe(true);
+    expect(fs.existsSync(ts)).toBe(false);
+  });
 });
