@@ -19,9 +19,20 @@ describe("Vercel deployment configuration", () => {
     expect(content).not.toMatch(/output\s*:/);
   });
 
+  test("vercel.json sets explicit buildCommand", () => {
+    const vercelJsonPath = path.join(rootDir, "vercel.json");
+    const config = JSON.parse(fs.readFileSync(vercelJsonPath, "utf-8"));
+    expect(config.buildCommand).toBe("npm run build");
+  });
+
   test("public directory exists", () => {
     const publicDir = path.join(rootDir, "public");
     expect(fs.existsSync(publicDir)).toBe(true);
     expect(fs.statSync(publicDir).isDirectory()).toBe(true);
+  });
+
+  test("next.config.ts does not exist (Next.js 14.2.x requires .mjs)", () => {
+    const nextConfigTsPath = path.join(rootDir, "next.config.ts");
+    expect(fs.existsSync(nextConfigTsPath)).toBe(false);
   });
 });
